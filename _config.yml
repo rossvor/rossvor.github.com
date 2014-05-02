@@ -8,14 +8,13 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
+title : Code and Graphics
 tagline: Site Tagline
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : Ross Vorotynskij
+  email : ross@rvcg.net
+  github : rossvor
+
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -54,7 +53,7 @@ JB :
   #   - Only the following values are falsy: ["", null, false]
   #   - When setting BASE_PATH it must be a valid url.
   #     This means always setting the protocol (http|https) or prefixing with "/"
-  BASE_PATH : false
+  BASE_PATH : http://rossvor.github.io/rossvor.github.com
 
   # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
   # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
@@ -80,34 +79,34 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
-    disqus :
-      short_name : jekyllbootstrap
-    livefyre :
-      site_id : 123
-    intensedebate :
-      account : 123abc
-    facebook :
-      appid : 123
-      num_posts: 5
-      width: 580
-      colorscheme: light
+    provider : false
+  #  disqus :
+      #short_name : jekyllbootstrap
+    #livefyre :
+      #site_id : 123
+    #intensedebate :
+      #account : 123abc
+    #facebook :
+      #appid : 123
+      #num_posts: 5
+      #width: 580
+      #colorscheme: light
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
   # Set 'provider' to false to turn analytics off globally.
   #        
   analytics :
-    provider : google 
-    google : 
-        tracking_id : 'UA-123-12'
-    getclicky :
-      site_id : 
-    mixpanel :
-        token : '_MIXPANEL_TOKEN_'
-    piwik :
-        baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
-        idsite : '1'                   # the id of the site on Piwik
+    provider : false 
+    #google : 
+        #tracking_id : 'UA-123-12'
+    #getclicky :
+      #site_id : 
+    #mixpanel :
+        #token : '_MIXPANEL_TOKEN_'
+    #piwik :
+        #baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
+        #idsite : '1'                   # the id of the site on Piwik
 
   # Settings for sharing helper. 
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.
