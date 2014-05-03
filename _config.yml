@@ -14,6 +14,8 @@ author :
   name : Ross Vorotynskij
   email : ross@rvcg.net
   github : rossvor
+  
+markdown: kramdown  
 
 
 # The production_url is only used when full-domain names are needed
