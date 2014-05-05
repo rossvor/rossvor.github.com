@@ -79,19 +79,23 @@ Now create launchuzbl.sh.
 #!/bin/sh
 pipe=/tmp/testpipe
 
+trap "kill -TERM -$2" SIGTERM KILL EXIT		# cleanup
+
 sleep 1
 uzbl-browser -c - <$pipe $1
 ~~~
 
-We have to launch uzbl-browser with a bit of a delay before we set up our pipe, otherwise it fails to respond to piped commands. I'm still unsure of the reason for this idiosyncrasy.
+We have to launch uzbl-browser with a bit of a delay before we set up our pipe, otherwise it fails to respond to piped commands. I'm still unsure of the reason for this idiosyncrasy. The ``trap`` line will do the cleanup by killing off our process group id once uzbl-browser is closed.
 
 
 ### previewmd.sh
 ~~~sh
 #!/bin/sh
-launchuzbl.sh $1.html & watcher.sh $1
+pid=`ps --no-headers -o '%r' $$`
+
+launchuzbl.sh $1.html $pid & watcher.sh $1
 ~~~
-Just a wrapper script and the actual script user is going to call.
+Just a wrapper script and the actual script user is going to call. We send our process group id to launchuzbl so that it would have the means to kill it.
 
 
 ## 3. Result
